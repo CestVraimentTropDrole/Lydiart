@@ -1,8 +1,8 @@
-    <?php get_header(); ?>
+<?php get_header(); ?>
     
     <div>
         <section>
-            Page normale
+            Bienvenue sur la front page
         </section>
     </div>
 

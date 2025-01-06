@@ -1,8 +1,9 @@
     <?php get_header(); ?>
-    
+
     <div>
         <section>
-            Page normale
+            Erreur 404
+            Page introuvable
         </section>
     </div>
 
