@@ -23,4 +23,7 @@ add_action( 'after_setup_theme', 'custom_register_nav_menu', 0 );
 //Ajout d'une image à la une
 add_theme_support( 'post-thumbnails' );
 
+
+add_image_size('caca', 180, 50, false);
+
 ?>
