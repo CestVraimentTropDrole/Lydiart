@@ -17,12 +17,12 @@ Contact html
 
 <pre><?php 
     $image = get_field(selector: 'image');
-    var_dump($image);
+    //var_dump($image);
     $src = $image['url'];
     $alt = $image['title'];
     
-    $size = 'caca';
-    $thumb = $image['sizes'][ $size ];
+    $size = 'custom-size';
+    $thumb = $image['sizes'][$size];
     $width = $image['sizes'][ $size . '-width' ];
     $height = $image['sizes'][ $size . '-height' ];
 
