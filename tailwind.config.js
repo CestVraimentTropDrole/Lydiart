@@ -12,7 +12,11 @@ module.exports = {
       'playfair': ['Playfair Display', 'serif'],
       'poppins': ['Poppins', 'sans-serif']
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        'head': '4px 8px 16px 0 rgba(0, 0, 0, 0.12)',
+      }
+    },
   },
   plugins: [],
 }
