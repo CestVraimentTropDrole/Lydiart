@@ -554,24 +554,71 @@ video {
   display: none;
 }
 
-.text-center {
-  text-align: center;
+.flex {
+  display: flex;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.h-dvh {
+  height: 100dvh;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .font-playfair {
   font-family: Playfair Display, serif;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.menu-item-object-category > a {
+  display: none;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
-.text-marron {
-  --tw-text-opacity: 1;
-  color: rgb(139 111 87 / var(--tw-text-opacity, 1));
+.menu-item-object-page > a {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: "Poppins", serif;
 }
