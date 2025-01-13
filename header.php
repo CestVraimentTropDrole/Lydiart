@@ -11,13 +11,17 @@
     <?php wp_head(); ?>
   </head>
   <body class="flex flex-row">
-    <header class="py-8 px-7 h-dvh border-2 border-black border-solid">
+    <header class="py-8 px-7 h-dvh top-0 sticky border-2 border-black border-solid">
       <div class="menu-container flex flex-col items-center">
         <a href="<?php echo home_url(); ?>">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo" class="w-28 h-32">
         </a>
         <?php wp_nav_menu(array('menu' => 'primary_menu')); ?>
         <div class="menu-link-container w-full">
+          <ul>
+            <li class="menu-item-object-page"><a href="http://localhost/lydia_fize/index.php/mentions-legales/">Mentions légales</a></li>
+            <li class="menu-item-object-page"><a href="http://localhost/lydia_fize/index.php/politique-de-confidentialite/">Politique de confidentialité</a></li>
+          </ul>
           <ul class="flex flex-row">
             <li class="menu-item-object-page"><a>In</a></li>
             <li class="menu-item-object-page"><a>Fa</a></li>
