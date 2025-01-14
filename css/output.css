@@ -570,6 +570,7 @@ h3 {
   font-family: Poppins, sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 300;
 }
 
 .sticky {
@@ -677,6 +678,10 @@ h3 {
   gap: 1rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
 }
@@ -687,6 +692,10 @@ h3 {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-20 {
+  gap: 5rem;
 }
 
 .bg-blanc {
@@ -738,14 +747,19 @@ h3 {
   padding-right: 2rem;
 }
 
-.py-14 {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-}
-
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-6 {
@@ -761,16 +775,6 @@ h3 {
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
-}
-
-.py-7 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .text-center {
@@ -810,8 +814,20 @@ h3 {
   line-height: 1rem;
 }
 
+.text-\[18px\] {
+  font-size: 18px;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-\[18px\] {
+  font-weight: 18px;
 }
 
 .text-blanc_full {

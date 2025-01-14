@@ -110,7 +110,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/format_quote.svg" alt="Parenthèse">
             <div class="text-center flex flex-col gap-12">
                 <h3><?php echo($title3); ?></h3>
-                <p class="font-poppins font-xs"><?php echo($content3); ?></p>
+                <p class="font-poppins font-xs font-light"><?php echo($content3); ?></p>
             </div>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/format_quote.svg" alt="Parenthèse">
         </section>
@@ -119,7 +119,7 @@
         <section class="flex flex-col py-4 px-10 items-center">
             <div class="flex flex-col gap-7 items-center">            
                 <h3 class="text-center"><?php echo($title4); ?></h3>
-                <p class="text-center"><?php echo($content4); ?></p>
+                <p class="text-center font-poppins font-light"><?php echo($content4); ?></p>
                 <img class="" src="<?php echo($src4); ?>" alt="<?php echo($alt4); ?>">
                 <a class="button text-base" href="<?php echo esc_url( $link_url4 ); ?>" target="<?php echo esc_attr( $link_target4 ); ?>"><?php echo esc_html( $link_title4 ); ?></a>
             </div>

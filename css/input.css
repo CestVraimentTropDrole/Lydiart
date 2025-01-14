@@ -10,7 +10,7 @@
         @apply font-playfair text-xl;
     }
     h3 {
-        @apply font-poppins text-2xl;
+        @apply font-poppins text-2xl font-light;
     }
 }
 
