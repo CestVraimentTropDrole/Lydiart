@@ -81,21 +81,21 @@
             <h3><?php echo($selection['title']); ?></h3>
             <div class="w-full flex gap-4 justify-between">
                 <div class=" w-1/3 flex flex-col gap-6 items-center">
-                    <img class="w-full aspect-4/3 object-cover" src="<?php echo($src[0]); ?>" alt="<?php echo($alt[0]); ?>">
+                    <img class="w-full aspect-4/3 object-cover shadow-frame" src="<?php echo($src[0]); ?>" alt="<?php echo($alt[0]); ?>">
                     <div>
                         <p class="font-playfair text-base"><?php echo($frame[0]['title']); ?></p>
                         <p class="font-poppins text-xs text-center"><?php echo($frame[0]['dimensions']); ?></p>
                     </div>
                 </div>
                 <div class="w-1/3 flex flex-col gap-6 items-center">
-                    <img class="w-full aspect-4/3 object-cover" src="<?php echo($src[1]); ?>" alt="<?php echo($alt[1]); ?>">
+                    <img class="w-full aspect-4/3 object-cover shadow-frame" src="<?php echo($src[1]); ?>" alt="<?php echo($alt[1]); ?>">
                     <div>                        
                         <p class="font-playfair text-base"><?php echo($frame[1]['title']); ?></p>
                         <p class="font-poppins text-xs text-center"><?php echo($frame[1]['dimensions']); ?></p>
                     </div>
                 </div>
                 <div class="w-1/3 flex flex-col gap-6 items-center">
-                    <img class="w-full aspect-4/3 object-cover" src="<?php echo($src[2]); ?>" alt="<?php echo($alt[2]); ?>">
+                    <img class="w-full aspect-4/3 object-cover shadow-frame" src="<?php echo($src[2]); ?>" alt="<?php echo($alt[2]); ?>">
                     <div> 
                         <p class="font-playfair text-base"><?php echo($frame[2]['title']); ?></p>
                         <p class="font-poppins text-xs text-center"><?php echo($frame[2]['dimensions']); ?></p>
@@ -120,7 +120,7 @@
             <div class="flex flex-col gap-7 items-center">            
                 <h3 class="text-center"><?php echo($title4); ?></h3>
                 <p class="text-center font-poppins font-light"><?php echo($content4); ?></p>
-                <img class="" src="<?php echo($src4); ?>" alt="<?php echo($alt4); ?>">
+                <img class="shadow-frame" src="<?php echo($src4); ?>" alt="<?php echo($alt4); ?>">
                 <a class="button text-base" href="<?php echo esc_url( $link_url4 ); ?>" target="<?php echo esc_attr( $link_target4 ); ?>"><?php echo esc_html( $link_title4 ); ?></a>
             </div>
         </section>

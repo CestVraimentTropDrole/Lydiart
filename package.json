@@ -5,6 +5,7 @@
   "dependencies": {
     "color-calendar": "^1.0.7",
     "express": "^4.21.0",
+    "flickity": "^3.0.0",
     "mongoose": "^8.7.0"
   }
 }

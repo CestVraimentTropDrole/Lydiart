@@ -573,6 +573,12 @@ h3 {
   font-weight: 300;
 }
 
+h4 {
+  font-family: Playfair Display, serif;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .sticky {
   position: sticky;
 }
@@ -591,6 +597,10 @@ h3 {
 
 .h-32 {
   height: 8rem;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .h-dvh {
@@ -630,6 +640,15 @@ h3 {
   width: 1.75rem;
 }
 
+.w-\[40px\] {
+  width: 40px;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-full {
   width: 100%;
 }
@@ -642,8 +661,20 @@ h3 {
   flex-direction: column;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-center {
@@ -664,6 +695,10 @@ h3 {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-20 {
+  gap: 5rem;
 }
 
 .gap-28 {
@@ -694,13 +729,18 @@ h3 {
   gap: 2rem;
 }
 
-.gap-20 {
-  gap: 5rem;
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .bg-blanc {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
+}
+
+.bg-blanc_full {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .bg-creme {
@@ -737,6 +777,16 @@ h3 {
   padding-right: 6rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -745,6 +795,11 @@ h3 {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .py-24 {
@@ -814,10 +869,6 @@ h3 {
   line-height: 1rem;
 }
 
-.text-\[18px\] {
-  font-size: 18px;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -826,13 +877,15 @@ h3 {
   font-weight: 300;
 }
 
-.font-\[18px\] {
-  font-weight: 18px;
-}
-
 .text-blanc_full {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.shadow-frame {
+  --tw-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.12);
+  --tw-shadow-colored: 0px 8px 16px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-head {
@@ -878,4 +931,4 @@ h3 {
 .button:hover {
   background-color: #7F6856;
   color: #ffffff;
-}
+} 

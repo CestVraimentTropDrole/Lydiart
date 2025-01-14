@@ -27,7 +27,7 @@
                 </div>
                 <div class="flex flex-col items-center gap-4 py-6">
                     <p class="font-poppins text-blanc_full">Visite de l'atelier sur demande</p>
-                    <a class="button text-base" href="http://localhost/lydia_fize/index.php/portfolio/" target="_self">Me contacter</a>
+                    <a class="button text-base" href="http://localhost/lydia_fize/index.php/me-contacter/" target="_self">Me contacter</a>
                 </div>
             </div>
         </footer>

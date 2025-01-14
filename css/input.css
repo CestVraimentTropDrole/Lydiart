@@ -12,6 +12,9 @@
     h3 {
         @apply font-poppins text-2xl font-light;
     }
+    h4 {
+        @apply font-playfair text-3xl;
+    }
 }
 
 .menu-menu-principal-container {
@@ -51,4 +54,4 @@
 .button:hover {
     background-color: #7F6856;
     color: #ffffff;
-}
+} 

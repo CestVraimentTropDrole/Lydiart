@@ -17,6 +17,7 @@ module.exports = {
     extend: {
       boxShadow: {
         'head': '4px 8px 16px 0 rgba(0, 0, 0, 0.12)',
+        'frame': '0px 8px 16px 0 rgba(0, 0, 0, 0.12)',
       },
       aspectRatio: {
         '4/3': '3 / 4',

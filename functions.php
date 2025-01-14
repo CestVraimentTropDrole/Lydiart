@@ -2,13 +2,17 @@
 
 //Ajout d'une feuille CSS
 function add_style() {
+    wp_enqueue_style('flickity', get_template_directory_uri() . '/css/flickity.css', false);
     wp_enqueue_style('main-style', get_template_directory_uri() . '/style.css', false);
+    wp_enqueue_style('input-style', get_template_directory_uri() . '/css/input.css', false);
+    wp_enqueue_style('portfolio-style', get_template_directory_uri() . '/css/portfolio.css', false);
 } //Hook
 add_action( 'wp_enqueue_scripts', 'add_style' );
 
 //Ajout d'un fichier JS
 function add_script() {
-    wp_enqueue_script('main-js', get_template_directory_uri() . '/main.js', array(), false, true);
+    wp_enqueue_script('flickity', get_template_directory_uri() . '/src/js/flickity.pkgd.min.js', array(), false, true);
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/src/js/main.js', array(), false, true);
 }
 add_action( 'wp_enqueue_scripts', 'add_script' );
 

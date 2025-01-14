@@ -1,0 +1,62 @@
+.main-carousel {
+    width: 50%;
+    overflow: visible;
+}
+
+.carousel {
+    margin: 0 60px;
+}
+
+.carousel-cell {
+    width: 100%; /* full width */
+    height: auto;
+    margin-right: 10px;
+    overflow: visible;
+    cursor: pointer;
+    transition: background-color 0.7s;
+    position: relative; /* Nécessaire pour gérer le z-index */
+    z-index: 1; /* Valeur par défaut */
+}
+
+.carousel-cell.selected {
+    z-index: 10; /* Image sélectionnée sera au-dessus des autres */
+}
+
+.carousel-cell img {
+    filter: blur(0px);
+    transition: filter 0.3s ease;
+}
+
+.carousel-cell img.blurred {
+    filter: blur(8px);
+}
+
+.carousel-cell .cartel {
+    position: absolute;
+    left: -10%;
+    top: 80%;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-cell .cartel.visible {
+    opacity: 1;
+}
+
+.flickity-viewport {
+    height: 400px;
+    overflow: visible;
+}
+
+.flickity-prev-next-button {
+    width: 40px;
+    height: 40px;
+}
+
+.flickity-prev-next-button.previous {
+    left: -60px;
+}
+.flickity-prev-next-button.next {
+    right: -60px;
+}

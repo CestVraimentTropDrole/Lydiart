@@ -36,7 +36,7 @@
         <!--Section Démarche-->
         <section id="démarche" class="w-full flex flex-col gap-12 justify-between px-10 py-3">
             <div class="flex gap-5 items-center">
-                <img src="<?php echo($frame[0]['image']['url']); ?>" alt="<?php echo($frame[0]['image']['title']); ?>" class="w-1/2">
+                <img src="<?php echo($frame[0]['image']['url']); ?>" alt="<?php echo($frame[0]['image']['title']); ?>" class="w-1/2 shadow-frame">
                 <div class="flex flex-col gap-4">
                     <h3><?php echo($frame[0]['title']); ?></h3>
                     <p class="font-poppins font-light text-sm"><?php echo($frame[0]['description']); ?></p>
@@ -47,10 +47,10 @@
                     <h3><?php echo($frame[1]['title']); ?></h3>
                     <p><?php echo($frame[1]['description']); ?></p>
                 </div>
-                <img src="<?php echo($frame[1]['image']['url']); ?>" alt="<?php echo($frame[1]['image']['title']); ?>"  class="w-1/2">
+                <img src="<?php echo($frame[1]['image']['url']); ?>" alt="<?php echo($frame[1]['image']['title']); ?>"  class="w-1/2 shadow-frame">
             </div>
             <div class="flex gap-5 items-center">
-                <img src="<?php echo($frame[2]['image']['url']); ?>" alt="<?php echo($frame[2]['image']['title']); ?>"  class="w-1/2">
+                <img src="<?php echo($frame[2]['image']['url']); ?>" alt="<?php echo($frame[2]['image']['title']); ?>"  class="w-1/2 shadow-frame">
                 <div class="flex flex-col gap-4">
                     <h3><?php echo($frame[2]['title']); ?></h3>
                     <p><?php echo($frame[2]['description']); ?></p>
@@ -61,10 +61,10 @@
                     <h3><?php echo($frame[3]['title']); ?></h3>
                     <p><?php echo($frame[3]['description']); ?></p>
                 </div>
-                <img src="<?php echo($frame[3]['image']['url']); ?>" alt="<?php echo($frame[3]['image']['title']); ?>"  class="w-1/2">
+                <img src="<?php echo($frame[3]['image']['url']); ?>" alt="<?php echo($frame[3]['image']['title']); ?>"  class="w-1/2 shadow-frame">
             </div>
             <div class="flex gap-5 items-center">
-                <img src="<?php echo($frame[4]['image']['url']); ?>" alt="<?php echo($frame[4]['image']['title']); ?>"  class="w-1/2">
+                <img src="<?php echo($frame[4]['image']['url']); ?>" alt="<?php echo($frame[4]['image']['title']); ?>"  class="w-1/2 shadow-frame">
                 <div class="flex flex-col gap-4">
                     <h3><?php echo($frame[4]['title']); ?></h3>
                     <p><?php echo($frame[4]['description']); ?></p>

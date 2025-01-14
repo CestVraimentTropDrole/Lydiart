@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title><?php bloginfo('name'); ?></title>
     <link href="<?php echo get_template_directory_uri(); ?>/css/output.css" rel="stylesheet">
+
     <!--Font Playfair Display-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
