@@ -1,6 +1,6 @@
 <?php
     /*
-        Template Name: Accueil
+        Template Name: Home
     */
 
     /*Section Presentation*/
@@ -63,7 +63,7 @@
 
 <?php get_header(); ?>
     
-    <div class="w-full h-fit flex flex-col gap-12">
+    <div class="w-full h-fit flex flex-col gap-16">
         <!--Section Présentation-->
         <section id="presentation" class="w-full h-dvh flex flex-row justify-between">
             <img class="w-1/2 h-full object-cover" src="<?php echo($src1); ?>" alt="<?php echo($alt1); ?>">
@@ -116,7 +116,7 @@
         </section>
 
         <!--Section Atelier-->
-        <section class="flex flex-col py-7 px-10 items-center">
+        <section class="flex flex-col py-4 px-10 items-center">
             <div class="flex flex-col gap-7 items-center">            
                 <h3 class="text-center"><?php echo($title4); ?></h3>
                 <p class="text-center"><?php echo($content4); ?></p>
