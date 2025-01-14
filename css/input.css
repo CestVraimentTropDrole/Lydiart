@@ -9,6 +9,9 @@
     h2 {
       @apply font-playfair text-xl;
     }
+    h3 {
+        @apply font-poppins text-2xl;
+    }
 }
 
 .menu-item-object-category > a {

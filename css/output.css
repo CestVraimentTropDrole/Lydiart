@@ -566,6 +566,12 @@ h2 {
   line-height: 1.75rem;
 }
 
+h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .sticky {
   position: sticky;
 }
@@ -578,8 +584,16 @@ h2 {
   display: flex;
 }
 
+.aspect-4\/3 {
+  aspect-ratio: 3 / 4;
+}
+
 .h-32 {
   height: 8rem;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .h-dvh {
@@ -597,6 +611,10 @@ h2 {
 
 .w-1\/2 {
   width: 50%;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
 }
 
 .w-28 {
@@ -639,8 +657,20 @@ h2 {
   gap: 0.75rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-7 {
+  gap: 1.75rem;
 }
 
 .bg-blanc {
@@ -648,9 +678,28 @@ h2 {
   background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
 }
 
+.bg-creme {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 203 182 / var(--tw-bg-opacity, 1));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .px-24 {
@@ -663,14 +712,41 @@ h2 {
   padding-right: 1.75rem;
 }
 
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.font-playfair {
+  font-family: Playfair Display, serif;
+}
+
+.font-poppins {
+  font-family: Poppins, sans-serif;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .shadow-head {
