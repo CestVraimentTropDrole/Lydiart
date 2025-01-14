@@ -11,12 +11,14 @@
     <?php wp_head(); ?>
   </head>
   <body class="h-full top-0 flex flex-row bg-blanc">
-    <header class="h-dvh top-0 sticky shadow-head">
-      <div class="menu-container h-auto py-8 px-7 flex flex-col items-center">
+    <header class="h-dvh top-0 sticky shadow-head w-1/4">
+      <div class="menu-container h-full py-8 px-7 flex flex-col items-center justify-between">
         <a href="<?php echo home_url(); ?>">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo" class="w-28 h-32">
         </a>
+
         <?php wp_nav_menu(array('menu' => 'primary_menu')); ?>
+        
         <div class="menu-link-container w-full">
           <ul>
             <li class="menu-item-object-page"><a href="http://localhost/lydia_fize/index.php/mentions-legales/">Mentions légales</a></li>

@@ -8,6 +8,7 @@ module.exports = {
       'marron': "#8B6F57",
       'gris': "#333333",
       'blanc': "#f5f5f5",
+      'blanc_full': "#ffffff",
     },
     fontFamily: {
       'playfair': ['Playfair Display', 'serif'],

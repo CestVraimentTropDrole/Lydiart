@@ -104,6 +104,5 @@
                 <p class="text-center">À travers les contrastes, la lumière et la force des couleurs, je cherche à traduire les émotions qui nous relient. Chaque œuvre devient un espace d'expression sincère, un miroir de l'âme qui invite le spectateur à une introspection et à une connexion avec ses propres ressentis.</p>
             </div>
         </section>
-    </div>
 
-<?php get_footer(); ?>
+        <?php get_footer(); ?>

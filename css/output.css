@@ -625,6 +625,26 @@ h3 {
   width: 100%;
 }
 
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-1\/5 {
+  width: 20%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-7 {
+  width: 1.75rem;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -665,12 +685,20 @@ h3 {
   gap: 1.5rem;
 }
 
+.gap-7 {
+  gap: 1.75rem;
+}
+
 .gap-8 {
   gap: 2rem;
 }
 
-.gap-7 {
-  gap: 1.75rem;
+.gap-28 {
+  gap: 7rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .bg-blanc {
@@ -681,6 +709,11 @@ h3 {
 .bg-creme {
   --tw-bg-opacity: 1;
   background-color: rgb(217 203 182 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gris {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity, 1));
 }
 
 .object-cover {
@@ -727,6 +760,21 @@ h3 {
   padding-bottom: 2rem;
 }
 
+.py-9 {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -747,6 +795,25 @@ h3 {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-blanc_full {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .shadow-head {
