@@ -14,12 +14,21 @@
     }
 }
 
+.menu-menu-principal-container {
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .menu-item-object-category > a {
     display: none;
 }
 
 .menu-item-object-page > a {
-    font-size: 1rem;
     line-height: 1.5rem;
     font-family: "Poppins", serif;
 }

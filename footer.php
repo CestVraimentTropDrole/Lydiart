@@ -1,5 +1,8 @@
         <footer class="w-full flex flex-col items-center px-10 py-9 gap-12 bg-gris">
-            <h2 class="text-blanc_full">@lydiafize_art</h2>
+            <div class="flex items-center gap-3">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_insta_blanc.svg" alt="Instagram" class="w-10">
+                <h2 class="text-blanc_full">@lydiafize_art</h2>
+            </div>
             <div class="flex gap-4">
                 <div class="flex gap-28 px-8 py-6">
                     <div class="flex flex-col gap-2 items-center">

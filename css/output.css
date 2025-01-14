@@ -592,10 +592,6 @@ h3 {
   height: 8rem;
 }
 
-.h-auto {
-  height: auto;
-}
-
 .h-dvh {
   height: 100dvh;
 }
@@ -617,32 +613,24 @@ h3 {
   width: 33.333333%;
 }
 
-.w-28 {
-  width: 7rem;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.w-2\/5 {
-  width: 40%;
-}
-
-.w-1\/5 {
-  width: 20%;
-}
-
 .w-1\/4 {
   width: 25%;
 }
 
-.w-6 {
-  width: 1.5rem;
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-28 {
+  width: 7rem;
 }
 
 .w-7 {
   width: 1.75rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-row {
@@ -669,8 +657,12 @@ h3 {
   gap: 3rem;
 }
 
-.gap-16 {
-  gap: 4rem;
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-28 {
+  gap: 7rem;
 }
 
 .gap-3 {
@@ -691,14 +683,6 @@ h3 {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-28 {
-  gap: 7rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .bg-blanc {
@@ -745,9 +729,19 @@ h3 {
   padding-right: 1.75rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-7 {
@@ -765,16 +759,6 @@ h3 {
   padding-bottom: 2.25rem;
 }
 
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -787,14 +771,19 @@ h3 {
   font-family: Poppins, sans-serif;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl {
@@ -802,9 +791,9 @@ h3 {
   line-height: 1.75rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -822,12 +811,21 @@ h3 {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.menu-menu-principal-container {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .menu-item-object-category > a {
   display: none;
 }
 
 .menu-item-object-page > a {
-  font-size: 1rem;
   line-height: 1.5rem;
   font-family: "Poppins", serif;
 }

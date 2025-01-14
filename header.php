@@ -13,22 +13,22 @@
   <body class="h-full top-0 flex flex-row bg-blanc">
     <header class="h-dvh top-0 sticky shadow-head w-1/4">
       <div class="menu-container h-full py-8 px-7 flex flex-col items-center justify-between">
-        <a href="<?php echo home_url(); ?>">
+        <a href="<?php echo home_url(); ?>/index.php/accueil/">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo" class="w-28 h-32">
         </a>
 
         <?php wp_nav_menu(array('menu' => 'primary_menu')); ?>
-        
-        <div class="menu-link-container w-full">
+
+        <div class="menu-link-container w-full flex flex-col gap-3">
           <ul>
-            <li class="menu-item-object-page"><a href="http://localhost/lydia_fize/index.php/mentions-legales/">Mentions légales</a></li>
-            <li class="menu-item-object-page"><a href="http://localhost/lydia_fize/index.php/politique-de-confidentialite/">Politique de confidentialité</a></li>
+            <li class="menu-item-object-page"><a class="text-sm" href="http://localhost/lydia_fize/index.php/mentions-legales/">Mentions légales</a></li>
+            <li class="menu-item-object-page"><a class="text-sm" href="http://localhost/lydia_fize/index.php/politique-de-confidentialite/">Politique de confidentialité</a></li>
           </ul>
-          <ul class="flex flex-row">
-            <li class="menu-item-object-page"><a>In</a></li>
-            <li class="menu-item-object-page"><a>Fa</a></li>
-            <li class="menu-item-object-page"><a>LI</a></li>
-            <li class="menu-item-object-page"><a>LT</a></li>
+          <ul class="flex flex-row gap-2">
+            <li class="menu-item-object-page"><a><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_insta.svg" alt="Instagram"></a></li>
+            <li class="menu-item-object-page"><a><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_fb.svg" alt="Facebook"></a></li>
+            <li class="menu-item-object-page"><a><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_in.svg" alt="LinkedIn"></a></li>
+            <li class="menu-item-object-page"><a><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_linktree.svg" alt="Linktree"></a></li>
           </ul>
         </div>
       </div>
