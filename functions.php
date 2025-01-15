@@ -30,4 +30,24 @@ add_theme_support( 'post-thumbnails' );
 
 add_image_size('custom-size', 190, 190, true);
 
+
+//Fonction qui récupère les données d'ACF
+function fetchData($section) {
+    $data = array();
+    if (isset($section['image'])) { //S'il y a une image
+        $data['src'] = $section['image']['url'];
+        $data['alt'] = $section['image']['title'];
+    }
+    if (isset($section['title'])) { $data['title'] = $section['title']; }
+    if (isset($section['description'])) { $data['description'] = $section['description']; }
+    if (isset($section['content'])) { $data['content'] = $section['content']; }
+    
+    if (isset($section['button'])) {
+        $data['url'] = $section['button']['url'];
+        $data['but_title'] = $section['button']['title'];
+        $data['target'] = $section['button']['target'] ? $section['button']['target'] : '_self';
+    }
+    if (isset($section['dimensions'])) { $data['dimensions'] = $section['dimensions']; }
+    return($data);
+}
 ?>

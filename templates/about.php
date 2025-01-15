@@ -2,12 +2,9 @@
 /*
     Template Name: About
 */
-
+    
     /*Section Presentation*/
-    $presentation = get_field(selector: 'presentation');
-    $image = $presentation['image'];
-    $src1 = $image['url'];
-    $alt1 = $image['title'];
+    $presentation = fetchData(get_field(selector: 'presentation'));
 
     /*Section Démarche*/
     $demarche = get_field(selector: 'demarche');
@@ -17,14 +14,18 @@
             $frame[] = $value;
         }
     }
+
+    /*Bouton*/
+    $button = get_field(selector: 'button');
 ?>
 
 <?php get_header(); ?>
     
     <div class="w-full h-fit flex flex-col gap-20">
+
         <!--Section Présentation-->
         <section id="presentation" class="w-full h-dvh flex flex-row justify-between">
-            <img class="w-1/2 h-full object-cover" src="<?php echo($src1); ?>" alt="<?php echo($alt1); ?>">
+            <img class="w-1/2 h-full object-cover" src="<?php echo($presentation['src']); ?>" alt="<?php echo($presentation['alt']); ?>">
             <div class="w-1/2 flex flex-col justify-center px-24 gap-6">
                 <div class="flex flex-col gap-3">
                     <h2><?php echo($presentation['title']); ?></h2>
@@ -34,42 +35,28 @@
         </section>
 
         <!--Section Démarche-->
-        <section id="démarche" class="w-full flex flex-col gap-12 justify-between px-10 py-3">
-            <div class="flex gap-5 items-center">
-                <img src="<?php echo($frame[0]['image']['url']); ?>" alt="<?php echo($frame[0]['image']['title']); ?>" class="w-1/2 shadow-frame">
-                <div class="flex flex-col gap-4">
-                    <h3><?php echo($frame[0]['title']); ?></h3>
-                    <p class="font-poppins font-light text-sm"><?php echo($frame[0]['description']); ?></p>
-                </div>
-            </div>
-            <div class="flex gap-5 items-center">
-                <div class="flex flex-col gap-4">
-                    <h3><?php echo($frame[1]['title']); ?></h3>
-                    <p><?php echo($frame[1]['description']); ?></p>
-                </div>
-                <img src="<?php echo($frame[1]['image']['url']); ?>" alt="<?php echo($frame[1]['image']['title']); ?>"  class="w-1/2 shadow-frame">
-            </div>
-            <div class="flex gap-5 items-center">
-                <img src="<?php echo($frame[2]['image']['url']); ?>" alt="<?php echo($frame[2]['image']['title']); ?>"  class="w-1/2 shadow-frame">
-                <div class="flex flex-col gap-4">
-                    <h3><?php echo($frame[2]['title']); ?></h3>
-                    <p><?php echo($frame[2]['description']); ?></p>
-                </div>
-            </div>
-            <div class="flex gap-5 items-center">
-                <div class="flex flex-col gap-4">
-                    <h3><?php echo($frame[3]['title']); ?></h3>
-                    <p><?php echo($frame[3]['description']); ?></p>
-                </div>
-                <img src="<?php echo($frame[3]['image']['url']); ?>" alt="<?php echo($frame[3]['image']['title']); ?>"  class="w-1/2 shadow-frame">
-            </div>
-            <div class="flex gap-5 items-center">
-                <img src="<?php echo($frame[4]['image']['url']); ?>" alt="<?php echo($frame[4]['image']['title']); ?>"  class="w-1/2 shadow-frame">
-                <div class="flex flex-col gap-4">
-                    <h3><?php echo($frame[4]['title']); ?></h3>
-                    <p><?php echo($frame[4]['description']); ?></p>
-                </div>
-            </div>
+        <section id="démarche" class="w-full flex flex-col gap-12 justify-between items-center px-10 py-3">
+
+            <!--Affiche le contenu pour chaque groupe de champs de la section-->
+            <?php 
+                for ($i=0;$i<count($frame);$i++) {
+                    $demarche[$i] = fetchData($frame[$i]);
+                    $direction = NULL;
+
+                    if ($i%2 !== 0) { //Toutes les 2 sections, sa direction est inversée
+                        $direction = 'flex-row-reverse';
+                    }
+
+                    echo("<div class='flex ". $direction ." gap-5 items-center'>
+                            <img src=". $demarche[$i]['src'] ." alt=". $demarche[$i]['title'] ." class='w-1/2 shadow-frame'>
+                            <div class='flex flex-col gap-4'>
+                                <h3>". $demarche[$i]['title']  ."</h3>
+                                <p class='font-poppins font-light text-sm'>". $demarche[$i]['description']  ."</p>
+                            </div>
+                        </div>");
+                }
+            ?>
+            <a class="button text-base" href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target']); ?>"><?php echo esc_html($button['title']); ?></a>
         </section>
 
     <?php get_footer(); ?>
