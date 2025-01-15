@@ -20,18 +20,7 @@
     $citation = fetchData(get_field(selector: 'citation'));
 
     /*Section Atelier*/
-    $atelier = get_field(selector: 'atelier');
-    $title4 = $atelier['title'];
-    $content4 = $atelier['content'];
-    $image4 = $atelier['image'];
-    $src4 = $image4['url'];
-    $alt4 = $image4['title'];
-    $link4 = $atelier['button'];
-    if( $link4 ): 
-        $link_url4 = $link4['url'];
-        $link_title4 = $link4['title'];
-        $link_target4 = $link4['target'] ? $link4['target'] : '_self';
-    endif; 
+    $atelier = fetchData(get_field(selector: 'atelier'));
 ?>
 
 <?php get_header(); ?>
@@ -86,10 +75,10 @@
         <!--Section Atelier-->
         <section class="flex flex-col py-4 px-10 items-center">
             <div class="flex flex-col gap-7 items-center">            
-                <h3 class="text-center"><?php echo($title4); ?></h3>
-                <p class="text-center font-poppins font-light"><?php echo($content4); ?></p>
-                <img class="shadow-frame" src="<?php echo($src4); ?>" alt="<?php echo($alt4); ?>">
-                <a class="button text-base" href="<?php echo esc_url( $link_url4 ); ?>" target="<?php echo esc_attr( $link_target4 ); ?>"><?php echo esc_html( $link_title4 ); ?></a>
+                <h3 class="text-center"><?php echo($atelier['title']); ?></h3>
+                <p class="text-center font-poppins font-light"><?php echo($atelier['content']); ?></p>
+                <img class="shadow-frame" src="<?php echo($atelier['src']); ?>" alt="<?php echo($atelier['alt']); ?>">
+                <a class="button text-base" href="<?php echo esc_url($atelier['url']); ?>" target="<?php echo esc_attr($atelier['target']); ?>"><?php echo esc_html($atelier['but_title']); ?></a>
             </div>
         </section>
 

@@ -1,7 +1,10 @@
 <?php
     /*
         Template Name: Portfolio
-    */    
+    */
+    
+    /*Section En-tête*/
+    $header = fetchData(get_field(selector: 'header'));
 ?>
 
 <?php get_header(); ?>
@@ -9,10 +12,10 @@
     <div class="w-full h-fit flex flex-col gap-16">
         <!--Section En-tête-->
         <section id="header" class="w-full h-fit flex flex-col px-5 py-12 gap-16 items-center text-center">
-            <h4>Portfolio</h4>
+            <h4><?php echo($header['title']); ?></h4>
             <div class="w-3/5 flex flex-col gap-9 items-center">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/format_quote.svg" alt="Parenthèse" class="w-[40px]">
-                <p>Mes œuvres sont des prétextes pour me relier aux autres. La peinture fixe une trace, celle d'un geste guidé par l'émotion. À travers elle, je parle de mes peurs, mes joies et mes espoirs. Ce que vous voyez dans mes tableaux parle aussi de vous : ils deviennent des miroirs de vos propres mouvements d'âme, tandis que je ne suis qu'une interprète qui les rend visibles.</p>
+                <p class="font-poppins font-light"><?php echo($header['description']); ?></p>
             </div>
 
             <div class="w-full h-auto flex flex-col gap-8 items-center">

@@ -1,6 +1,6 @@
 .main-carousel {
     width: 50%;
-    /*overflow: visible;*/
+    overflow: visible;
 }
 
 .carousel {
@@ -11,7 +11,7 @@
     width: 100%; /* full width */
     height: auto;
     margin-right: 10px;
-    /*overflow: visible;*/
+    overflow: visible;
     cursor: pointer;
     transition: background-color 0.7s;
     position: relative; /* Nécessaire pour gérer le z-index */
@@ -51,7 +51,7 @@
 
 .flickity-viewport {
     height: 300px;
-    /*overflow: visible;*/
+    overflow: visible;
 }
 
 .flickity-prev-next-button {
