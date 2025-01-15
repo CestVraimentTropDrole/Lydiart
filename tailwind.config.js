@@ -5,6 +5,7 @@ module.exports = {
     colors: {
       'beige': "#bda18a",
       'creme': "#d9cbb6",
+      'comm': "#F5EFE6",
       'marron': "#8B6F57",
       'gris': "#333333",
       'blanc': "#f5f5f5",

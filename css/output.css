@@ -636,12 +636,24 @@ h4 {
   width: 7rem;
 }
 
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-3\/5 {
+  width: 60%;
+}
+
 .w-7 {
   width: 1.75rem;
 }
 
 .w-\[40px\] {
   width: 40px;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .w-fit {
@@ -673,16 +685,20 @@ h4 {
   align-items: center;
 }
 
-.justify-start {
-  justify-content: flex-start;
-}
-
 .justify-center {
   justify-content: center;
 }
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-12 {
@@ -729,8 +745,8 @@ h4 {
   gap: 2rem;
 }
 
-.gap-1 {
-  gap: 0.25rem;
+.gap-9 {
+  gap: 2.25rem;
 }
 
 .bg-blanc {
@@ -753,6 +769,11 @@ h4 {
   background-color: rgb(51 51 51 / var(--tw-bg-opacity, 1));
 }
 
+.bg-comm {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 239 230 / var(--tw-bg-opacity, 1));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -760,6 +781,10 @@ h4 {
 
 .p-10 {
   padding: 2.5rem;
+}
+
+.p-7 {
+  padding: 1.75rem;
 }
 
 .px-10 {
@@ -770,6 +795,11 @@ h4 {
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .px-24 {
@@ -854,6 +884,11 @@ h4 {
   line-height: 1.5rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -875,6 +910,10 @@ h4 {
 
 .font-light {
   font-weight: 300;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .text-blanc_full {
