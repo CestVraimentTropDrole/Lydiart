@@ -2,6 +2,7 @@
             <div class="flex items-center gap-3">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_insta_blanc.svg" alt="Instagram" class="w-10">
                 <h2 class="text-blanc_full">@lydiafize_art</h2>
+                <?php echo do_shortcode('[insta-gallery id="0"]'); ?>
             </div>
             <div class="flex gap-4">
                 <div class="flex gap-28 px-8 py-6">
