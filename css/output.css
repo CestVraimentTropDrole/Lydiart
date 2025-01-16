@@ -713,6 +713,10 @@ h4 {
   gap: 3rem;
 }
 
+.gap-14 {
+  gap: 3.5rem;
+}
+
 .gap-16 {
   gap: 4rem;
 }
@@ -757,10 +761,6 @@ h4 {
   gap: 2.25rem;
 }
 
-.gap-14 {
-  gap: 3.5rem;
-}
-
 .bg-blanc {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
@@ -771,6 +771,11 @@ h4 {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-comm {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 239 230 / var(--tw-bg-opacity, 1));
+}
+
 .bg-creme {
   --tw-bg-opacity: 1;
   background-color: rgb(217 203 182 / var(--tw-bg-opacity, 1));
@@ -779,11 +784,6 @@ h4 {
 .bg-gris {
   --tw-bg-opacity: 1;
   background-color: rgb(51 51 51 / var(--tw-bg-opacity, 1));
-}
-
-.bg-comm {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 239 230 / var(--tw-bg-opacity, 1));
 }
 
 .object-cover {
@@ -802,6 +802,11 @@ h4 {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .px-16 {
@@ -844,6 +849,11 @@ h4 {
   padding-bottom: 3rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -872,16 +882,6 @@ h4 {
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 
 .text-center {
