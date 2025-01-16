@@ -2,13 +2,19 @@
     /*
         Template Name: Single
     */    
+
 ?>
 
 <?php get_header(); ?>
     
     <div class="w-full h-fit flex flex-col gap-16">
-        <section id="article" class="flex flex-col items-center gap-14 py-20">
-            <p>Article</p>
+        <!--Section Article-->
+        <section id="article" class="flex flex-col items-center gap-14 py-20 px-24">
+            <h4><?php echo(get_the_title()); ?></h4>
+            <div>
+                <?php echo(get_the_post_thumbnail()); ?>
+            </div>
+            <div class="w-full flex flex-col items-start font-poppins font-light"><?php echo(get_the_content()); ?></div>
         </section>
 
 <?php get_footer(); ?>

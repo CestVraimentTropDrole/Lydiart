@@ -28,7 +28,7 @@
           <ul class="flex flex-row gap-2">
             <li class="menu-item-object-page"><a href="https://www.instagram.com/lydiafize_art/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_insta.svg" alt="Instagram"></a></li>
             <li class="menu-item-object-page"><a href="https://www.facebook.com/lydiafizeartiste" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_fb.svg" alt="Facebook"></a></li>
-            <li class="menu-item-object-page"><a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAABNkcyMB2Cg01P7QQnouz-U4wptWBvjm4Og&keywords=lydia%20fize%20%F0%9F%8E%A8&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=94449be0-7005-430a-924d-5d23b3d693a4&sid=bvW&spellCorrectionEnabled=true" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_in.svg" alt="LinkedIn"></a></li>
+            <li class="menu-item-object-page"><a href="https://www.linkedin.com/in/lydiafize/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_in.svg" alt="LinkedIn"></a></li>
             <li class="menu-item-object-page"><a href="https://linktr.ee/lydiafizeartist" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_linktree.svg" alt="Linktree"></a></li>
           </ul>
         </div>
