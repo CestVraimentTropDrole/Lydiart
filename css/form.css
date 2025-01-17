@@ -1,0 +1,88 @@
+/*Stylesheet of contact form*/
+
+.wpcf7-form { /*Whole contact form*/
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+
+    p {
+        display: flex;
+        gap: 18px;
+        justify-content: space-between;
+        width: 100%;
+        height: fit-content;
+      
+        > span {
+          width: 100%;
+          height: fit-content;
+      
+            > input, > textarea {
+                background-color: transparent;
+                padding: 4px 0;
+                width: 100%;
+                height: 40px;
+                border-bottom: white solid 1px;
+                transition: border-bottom 0.3s;
+                resize: none; /* Désactive le redimensionnement manuel */
+            }
+
+            > input:focus, > textarea:focus {
+                border-bottom: #D2C4AF solid 1px;
+            }
+            
+            input::placeholder, textarea::placeholder {
+                color: white;
+            }
+
+            > input:focus-visible, > textarea:focus-visible {
+                outline: none;
+            }
+
+            > span {
+                >span {
+                    text-align: center;
+
+                    > label {
+                        > span {
+                            color: white;
+                            padding: 10px;
+                            font-family: 'Poppins', 'sans-serif';
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+        }
+
+        > span:focus-visible {
+            border: none;
+        }
+    }
+
+    p:is(:nth-last-child(2)) {
+            background-color: #D2C4AF;
+            color: #333333;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 16px;
+            border: none;
+            border-radius: 100px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            width: auto;
+            margin: auto;
+            text-align: center;
+
+            > span {
+                display: none;
+            }
+    }
+
+    p:is(:nth-last-child(2)):hover {
+        background-color: #7F6856;
+        color: #ffffff;
+    }
+}

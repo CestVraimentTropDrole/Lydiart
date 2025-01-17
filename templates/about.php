@@ -20,8 +20,6 @@
 ?>
 
 <?php get_header(); ?>
-    
-    <div class="w-full h-fit flex flex-col gap-20">
 
         <!--Section Présentation-->
         <section id="presentation" class="w-full h-dvh flex flex-row justify-between">

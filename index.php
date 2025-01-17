@@ -7,7 +7,6 @@
 
 <?php get_header(); ?>
     
-    <div class="w-full h-fit flex flex-col gap-16">
         <!--Section Article-->
         <section id="article" class="flex flex-col items-center gap-14 py-20 px-24">
             <h4><?php echo(get_the_title()); ?></h4>

@@ -1,7 +1,9 @@
         <footer class="w-full flex flex-col items-center px-10 py-9 gap-12 bg-gris">
-            <div class="flex items-center gap-3">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_insta_blanc.svg" alt="Instagram" class="w-10">
-                <h2 class="text-blanc_full">@lydiafize_art</h2>
+            <div class="flex flex-col items-center gap-4">
+                <div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_insta_blanc.svg" alt="Instagram" class="w-10">
+                    <h2 class="text-blanc_full">@lydiafize_art</h2>
+                </div>
                 <?php echo do_shortcode('[insta-gallery id="0"]'); ?>
             </div>
             <div class="flex gap-4">
@@ -28,7 +30,7 @@
                 </div>
                 <div class="flex flex-col items-center gap-4 py-6">
                     <p class="font-poppins text-blanc_full">Visite de l'atelier sur demande</p>
-                    <a class="button text-base" href="http://localhost/lydia_fize/index.php/me-contacter/" target="_self">Me contacter</a>
+                    <a class="button text-base" href="<?php echo home_url(); ?>/me-contacter/" target="_self">Me contacter</a>
                 </div>
             </div>
         </footer>

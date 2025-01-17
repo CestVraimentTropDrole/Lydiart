@@ -25,7 +25,6 @@
 
 <?php get_header(); ?>
     
-    <div class="w-full h-fit flex flex-col gap-16">
         <!--Section Présentation-->
         <section id="presentation" class="w-full h-dvh flex flex-row justify-between">
             <img class="w-1/2 h-full object-cover" src="<?php echo($presentation['src']); ?>" alt="<?php echo($presentation['alt']); ?>">

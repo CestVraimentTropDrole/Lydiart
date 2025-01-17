@@ -6,7 +6,6 @@
 
 <?php get_header(); ?>
     
-    <div class="w-full h-fit flex flex-col gap-16">
         <!--Section Actus-->
         <section class="flex flex-col gap-14 py-20">
 

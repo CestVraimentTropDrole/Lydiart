@@ -9,7 +9,6 @@
 
 <?php get_header(); ?>
     
-    <div class="w-full h-fit flex flex-col gap-16">
         <!--Section En-tête-->
         <section id="header" class="w-full h-fit flex flex-col px-5 py-12 gap-16 items-center text-center">
             <h4><?php echo($header['title']); ?></h4>
@@ -31,7 +30,7 @@
                                         <p class="font-poppins text-xs">Peinture au couteau</p>
                                     </div>
                                 </div>
-                                <a class="button text-xs" href="http://localhost/lydia_fize/index.php/me-contacter/" target="_self">Acquérir</a>
+                                <a class="button text-xs" href="<?php echo home_url(); ?>/me-contacter/" target="_self">Acquérir</a>
                             </div>
                     </div>
                     <div class="carousel-cell flex justify-center">

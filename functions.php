@@ -6,6 +6,7 @@ function add_style() {
     wp_enqueue_style('main-style', get_template_directory_uri() . '/style.css', false);
     wp_enqueue_style('input-style', get_template_directory_uri() . '/css/input.css', false);
     wp_enqueue_style('portfolio-style', get_template_directory_uri() . '/css/portfolio.css', false);
+    wp_enqueue_style('form-style', get_template_directory_uri() . '/css/form.css', false);
 } //Hook
 add_action( 'wp_enqueue_scripts', 'add_style' );
 

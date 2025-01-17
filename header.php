@@ -12,9 +12,9 @@
     <?php wp_head(); ?>
   </head>
   <body class="h-full top-0 flex flex-row bg-blanc">
-    <header class="h-dvh top-0 sticky shadow-head w-1/4">
-      <div class="menu-container h-full py-8 px-7 flex flex-col items-center justify-between">
-        <a href="<?php echo home_url(); ?>/index.php/accueil/">
+    <header class="h-dvh top-0 bottom-0 fixed shadow-head w-[25vw] z-20 bg-blanc">
+      <div class="menu-container h-full py-8 px-7 flex flex-col items-center justify-between z-0 relative">
+        <a href="<?php echo home_url(); ?>/accueil/">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo" class="w-28 h-32">
         </a>
 
@@ -22,8 +22,8 @@
 
         <div class="menu-link-container w-full flex flex-col gap-3">
           <ul>
-            <li class="menu-item-object-page"><a class="text-sm" href="http://localhost/lydia_fize/index.php/mentions-legales/">Mentions légales</a></li>
-            <li class="menu-item-object-page"><a class="text-sm" href="http://localhost/lydia_fize/index.php/politique-de-confidentialite/">Politique de confidentialité</a></li>
+            <li class="menu-item-object-page"><a class="text-sm" href="<?php echo home_url(); ?>/mentions-legales/">Mentions légales</a></li>
+            <li class="menu-item-object-page"><a class="text-sm" href="<?php echo home_url(); ?>/politique-de-confidentialite/">Politique de confidentialité</a></li>
           </ul>
           <ul class="flex flex-row gap-2">
             <li class="menu-item-object-page"><a href="https://www.instagram.com/lydiafize_art/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_insta.svg" alt="Instagram"></a></li>
@@ -34,3 +34,5 @@
         </div>
       </div>
     </header>
+
+    <div class="w-3/4 h-fit flex flex-col gap-16 ml-[25vw]">

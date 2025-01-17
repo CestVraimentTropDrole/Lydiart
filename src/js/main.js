@@ -42,3 +42,11 @@ function clearAllSelections(carouselCells) {
         clearSelection(otherCell, otherImg, otherCartel);
     });
 }
+
+/*Script qui ajuste la hauteur de l'input message du formulaire de contact*/
+const textarea = document.getElementById('message');
+
+textarea.addEventListener('input', function() {
+    this.style.height = 'auto'; // Réinitialise la hauteur pour recalculer
+    this.style.height = this.scrollHeight + 'px'; // Ajuste la hauteur au contenu
+});
