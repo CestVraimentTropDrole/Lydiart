@@ -35,4 +35,5 @@
       </div>
     </header>
 
-    <div class="w-3/4 h-fit flex flex-col gap-16 ml-[25vw]">
+    <!--Si la page actuelle est contact.php, retirer le gap-->
+    <div class="w-3/4 h-fit flex flex-col <?php echo is_page() && !is_page('me-contacter') ? 'gap-16' : ''; ?> ml-[25vw]">
