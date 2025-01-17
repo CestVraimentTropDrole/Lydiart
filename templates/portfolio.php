@@ -5,13 +5,28 @@
     
     /*Section En-tête*/
     $header = fetchData(get_field(selector: 'header'));
+
+    /*Collections*/
+    $collections = get_terms(['taxonomy' => 'collection','hide_empty' => false,]);
+
+    /*Section Avis*/
+    $testimonials = get_field(selector: 'testimonials');
+
+    //Boucle qui supprime tous les éléments vides de la section
+    $testimonials = array_filter($testimonials, function ($value) {
+        return !empty($value); // Supprime les chaînes vides
+    });
 ?>
 
 <?php get_header(); ?>
+
+        <pre><?php
+        ?></pre>
     
         <!--Section En-tête-->
         <section id="header" class="w-full h-fit flex flex-col px-5 py-12 gap-16 items-center text-center">
             <h4><?php echo($header['title']); ?></h4>
+
             <div class="w-3/5 flex flex-col gap-9 items-center">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/format_quote.svg" alt="Parenthèse" class="w-[40px]">
                 <p class="font-poppins font-light"><?php echo($header['description']); ?></p>
@@ -46,7 +61,9 @@
                         </div>
                     </div>
                 </div>
-                <h2>"Animaux totem"</p>
+
+                <!--Affiche le nom de la collection-->
+                <h2>"<?php echo($collections[1]->name); ?>"</p>
             </div>
         </section>
 
@@ -88,25 +105,24 @@
         <!--Section Avis-->
         <section id="testimonials" class="flex flex-col items-center gap-6">
             <h3>Quelques avis :</h3>
+
             <div class="main-carousel avis-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": false, "pageDots": false, "wrapAround": true }'>
-                <div class="carousel-cell w-auto bg-comm shadow-frame">
-                    <div class="inner-cell flex flex-col items-start p-7 gap-10">
-                        <p class="font-poppins text-xl">Maya47</p>
-                        <p class="font-poppins font-light">“Une grande sensibilité dans les oeuvres présentées” </p>
-                    </div>
-                </div>
-                <div class="carousel-cell w-auto bg-comm shadow-frame">
-                    <div class="inner-cell flex flex-col items-start p-7 gap-10">
-                        <p class="font-poppins text-xl">Abdelartiste74</p>
-                        <p class="font-poppins font-light">“Ces oeuvres m'ont fait réfléchir sur ma vie” </p>
-                    </div>
-                </div>
-                <div class="carousel-cell w-auto bg-comm shadow-frame">
-                    <div class="inner-cell flex flex-col items-start p-7 gap-10">
-                        <p class="font-poppins text-xl">ThéoFrechetGaming</p>
-                        <p class="font-poppins font-light">“J'ai adoré le tableau de captain america, car j'adore les avengers” </p>
-                    </div>
-                </div>
+                
+                <!--Boucle qui affiche chaque commentaire-->
+                <?php
+                    foreach ($testimonials as $key => $review) {
+                        $name = $review['name'];
+                        $message = $review['message'];
+
+                        echo("<div class='carousel-cell w-auto bg-comm'>
+                                <div class='inner-cell flex flex-col items-start p-7 gap-10'>
+                                    <p class='font-poppins text-xl'>". $name ."</p>
+                                    <p class='font-poppins font-light'>". $message ."</p>
+                                </div>
+                            </div>");
+                    }
+                ?>
+
             </div>
         </section>
 
