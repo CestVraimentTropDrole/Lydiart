@@ -16,6 +16,7 @@
         > span {
           width: 100%;
           height: fit-content;
+          border-bottom: transparent solid 2px;
       
             > input, > textarea {
                 background-color: transparent;
@@ -27,12 +28,28 @@
                 resize: none; /* Désactive le redimensionnement manuel */
             }
 
+            > textarea {
+                resize: none; /* Désactive le redimensionnement manuel */
+                overflow-y: hidden; /* Masque le défilement vertical */
+            }
+
             > input:focus, > textarea:focus {
-                border-bottom: #D2C4AF solid 1px;
+                border-bottom: #BDA18A solid 1px;
             }
             
             input::placeholder, textarea::placeholder {
                 color: white;
+                transform: translate(0px, 0px) scale(1);
+                transition: color 0.3s ease, transform 0.3s ease;
+            }
+
+            input:focus::placeholder, textarea:focus::placeholder {
+                color: #BDA18A;
+                transform: translate(-16px, -15px) scale(0.9);
+            }
+
+            textarea:focus::placeholder {
+                transform: translate(-34px, -10px) scale(0.9);
             }
 
             > input:focus-visible, > textarea:focus-visible {
