@@ -65,3 +65,8 @@
 .flickity-prev-next-button.next {
     right: -60px;
 }
+
+
+.avis-carousel .flickity-viewport{
+    overflow: hidden;
+}

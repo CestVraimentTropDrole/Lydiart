@@ -88,7 +88,7 @@
         <!--Section Avis-->
         <section id="testimonials" class="flex flex-col items-center gap-6">
             <h3>Quelques avis :</h3>
-            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": false, "pageDots": false, "wrapAround": true }'>
+            <div class="main-carousel avis-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": false, "pageDots": false, "wrapAround": true }'>
                 <div class="carousel-cell w-auto bg-comm shadow-frame">
                     <div class="inner-cell flex flex-col items-start p-7 gap-10">
                         <p class="font-poppins text-xl">Maya47</p>

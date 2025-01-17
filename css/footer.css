@@ -1,0 +1,19 @@
+#instagram-gallery-feed-0 {
+    width: 100%;
+
+    .instagram-gallery-list {
+        width: 100%;
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        .instagram-gallery-item {
+            grid-column: auto / span 1;
+            width: 100%;
+        }
+    }
+
+    .instagram-gallery__actions {
+        display: none;
+    }
+}
