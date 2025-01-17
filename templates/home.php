@@ -63,12 +63,16 @@
 
         <!--Section Citation-->
         <section class="flex gap-8 px-16 py-24 bg-creme justify-center items-center">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/format_quote.svg" alt="Parenthèse">
-            <div class="text-center flex flex-col gap-12">
+            <div class="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/format_quote.svg" alt="Parenthèse">
+            </div>
+            <div class="text-center flex flex-col gap-12 w-4/5 justify-between">
                 <h3><?php echo($citation['title']); ?></h3>
                 <p class="font-poppins font-xs font-light"><?php echo($citation['content']); ?></p>
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/format_quote.svg" alt="Parenthèse">
+            <div class="origin-center rotate-180">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/format_quote.svg" alt="Parenthèse">
+            </div>
         </section>
 
         <!--Section Atelier-->
