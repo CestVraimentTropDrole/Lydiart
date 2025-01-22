@@ -1,9 +1,9 @@
         <footer class="w-full flex flex-col items-center px-10 py-9 gap-12 bg-gris">
             <div class="w-full flex flex-col items-center gap-4">
-                <div class="flex items-center gap-2">
+                <a class="flex items-center gap-2" href="https://www.instagram.com/lydiafize_art/" target="_blank">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_insta_blanc.svg" alt="Instagram" class="w-10">
                     <h2 class="text-blanc_full">@lydiafize_art</h2>
-                </div>
+                </a>
                 <?php echo do_shortcode('[insta-gallery id="0"]'); ?>
             </div>
             <div class="flex gap-4">
