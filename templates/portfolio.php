@@ -2,23 +2,6 @@
     /*
         Template Name: Portfolio
     */
-
-    function fetchPost($cat_id) {
-        $posts_array = get_posts( //Récupère toutes les oeuvres de la catégorie affichée catégorie
-            array(
-                'posts_per_page' => -1,
-                'post_type' => 'artwork',
-                'tax_query' => array(
-                    array(
-                        'taxonomy' => 'collection',
-                        'field' => 'term_id',
-                        'terms' => $cat_id
-                    )
-                )
-            )
-        );
-        return $posts_array;
-    }
     
     /*Section En-tête*/
     $header = fetchData(get_field(selector: 'header'));
@@ -31,10 +14,11 @@
     for ($i=0; $i<count($data); $i++) {
         $collections[$i]['name'] = $data[$i]->name;
         $collections[$i]['id'] = $data[$i]->term_id;
+        $placeholder = "<img src='". get_template_directory_uri() ."/assets/images/Le bioù.jpg' alt='Placeholder'/>";
 
         $collec_img[$i] = fetchPost($collections[$i]['id']);
 
-        $collec_img[$i][0] = $collec_img[$i] ? get_the_post_thumbnail($collec_img[$i][0]->ID) : "vide";
+        $collec_img[$i][0] = $collec_img[$i] ? get_the_post_thumbnail($collec_img[$i][0]->ID) : $placeholder;
     }
 
     $posts_array = fetchPost($collections[0]['id']);

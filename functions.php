@@ -52,4 +52,22 @@ function fetchData($section) {
     if (isset($section['dimensions'])) { $data['dimensions'] = $section['dimensions']; }
     return($data);
 }
+
+//Fonction qui cherche les oeuvres des collections selon leur id
+function fetchPost($cat_id) {
+    $posts_array = get_posts( //Récupère toutes les oeuvres de la catégorie affichée catégorie
+        array(
+            'posts_per_page' => -1,
+            'post_type' => 'artwork',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'collection',
+                    'field' => 'term_id',
+                    'terms' => $cat_id
+                )
+            )
+        )
+    );
+    return $posts_array;
+}
 ?>

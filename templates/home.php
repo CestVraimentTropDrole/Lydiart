@@ -4,10 +4,10 @@
     */
 
     /*Section Presentation*/
-    $presentation = fetchData(get_field(selector: 'presentation'));
+    $presentation = fetchData(get_field('presentation'));
 
     /*Section Selection*/
-    $selection = get_field(selector: 'selection');
+    $selection = get_field('selection');
     $group = $selection['group'];
 
     foreach ($group as $key => $value) {
@@ -17,10 +17,10 @@
     }
 
     /*Section Citation*/
-    $citation = fetchData(get_field(selector: 'citation'));
+    $citation = fetchData(get_field('citation'));
 
     /*Section Atelier*/
-    $atelier = fetchData(get_field(selector: 'atelier'));
+    $atelier = fetchData(get_field('atelier'));
 ?>
 
 <?php get_header(); ?>

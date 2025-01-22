@@ -3,6 +3,7 @@
         Template Name: Single
     */    
 
+    $content = get_field('content');
 ?>
 
 <?php get_header(); ?>
@@ -13,7 +14,7 @@
             <div>
                 <?php echo(get_the_post_thumbnail()); ?>
             </div>
-            <div class="w-full flex flex-col items-start font-poppins font-light"><?php echo(get_the_content()); ?></div>
+            <div class="w-full flex flex-col items-start font-poppins font-light"><?php echo($content); ?></div>
         </section>
 
 <?php get_footer(); ?>
