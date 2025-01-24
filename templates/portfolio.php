@@ -6,22 +6,29 @@
     /*Section En-tête*/
     $header = fetchData(get_field(selector: 'header'));
 
-    /*Collections*/
-    $data = get_terms(['taxonomy' => 'collection','hide_empty' => false,]);
-    $collections = array();
-    $collec_img = array();
+    /*Section Collections*/
 
-    for ($i=0; $i<count($data); $i++) {
-        $collections[$i]['name'] = $data[$i]->name;
-        $collections[$i]['id'] = $data[$i]->term_id;
+    //Récupère toutes les données des collections
+    $data_collec = get_terms(['taxonomy' => 'collection','hide_empty' => false,]);
+    
+    //Tableau qui récupère les infos importantes de chaque collection
+    $collections = array();
+
+    //Boucle qui parcourt chaque collection pour récupérer ses données
+    for ($i=0; $i<count($data_collec); $i++) {
+        $collections[$i]['name'] = $data_collec[$i]->name;
+        $collections[$i]['id'] = $data_collec[$i]->term_id;
         $placeholder = "<img src='". get_template_directory_uri() ."/assets/images/Le bioù.jpg' alt='Placeholder'/>";
 
-        $collec_img[$i] = fetchPost($collections[$i]['id']);
+        //Récupère toutes les oeuvres d'une collections
+        $collections[$i]['image'] = fetchPost($collections[$i]['id']);
 
-        $collec_img[$i][0] = $collec_img[$i] ? get_the_post_thumbnail($collec_img[$i][0]->ID) : $placeholder;
+        //Si la collection ne possède pas d'oeuvre avec une image, affiche un placeholder à la place
+        $collections[$i]['image'] = $collections[$i]['image'] ? get_the_post_thumbnail($collections[$i]['image'][0]->ID) : $placeholder;
     }
 
-    $posts_array = fetchPost($collections[0]['id']);
+    $idmain_collec = 0; //Variable de l'id de la collection affichée dans le carousel
+    $oeuvres_array = fetchPost($collections[$idmain_collec]['id']); //Récupère toutes les oeuvres de la collection affichée
 
     /*Section Avis*/
     $testimonials = get_field('testimonials');
@@ -35,7 +42,6 @@
 <?php get_header(); ?>
 
         <pre><?php
-            //var_dump($collec_img);
         ?></pre>
     
         <!--Section En-tête-->
@@ -51,10 +57,10 @@
                 <div id="slider" class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": false, "pageDots": false, "lazyLoad": true }'>
                     
                     <?php
-                        for ($i=0; $i<count($posts_array); $i++) {
-                            $title = get_the_title($posts_array[$i]); //Nom de l'oeuvre
-                            $image = get_the_post_thumbnail($posts_array[$i]); //Image de l'oeuvre
-                            $content = get_fields($posts_array[$i]->ID); //Récupérer les champs ACF
+                        for ($i=0; $i<count($oeuvres_array); $i++) {
+                            $title = get_the_title($oeuvres_array[$i]); //Nom de l'oeuvre
+                            $image = get_the_post_thumbnail($oeuvres_array[$i]); //Image de l'oeuvre
+                            $content = get_fields($oeuvres_array[$i]->ID); //Récupérer les champs ACF
 
                             echo("<div class='carousel-cell flex justify-center'>
                                     <div class='w-3/4 aspect-4/3 object-cover shadow-frame'>". $image ."</div>
@@ -67,7 +73,7 @@
                                                 <p class='font-poppins text-xs'>". $content['type'] ."</p>
                                             </div>
                                         </div>
-                                        <a class='button text-xs' href='<?php echo home_url(); ?>/me-contacter/' target='_self'>Acquérir</a>
+                                        <a class='button text-xs' href=". home_url() ."/me-contacter/' target='_self'>Acquérir</a>
                                     </div>
                                 </div>");
                         }
@@ -89,9 +95,9 @@
                     for ($i=1; $i<count($collections); $i++) {
 
                         echo("<div class='collection-frame flex flex-col items-center gap-4'>
-                                <div class='w-3/4 aspect-4/3 object-cover shadow-frame'>". $collec_img[$i][0] ."</div>
+                                <div class='w-3/4 aspect-4/3 object-cover shadow-frame'>". $collections[$i]['image'] ."</div>
                                 <h2>". $collections[$i]['name'] ."</h2>
-                                <a class='button text-base' href='http://localhost/lydia_fize/index.php/portfolio/' target='_self'>Voir plus</a>
+                                <a class='button text-base' data-id=". $collections[$i]['id'] ." href='http://localhost/lydia_fize/index.php/portfolio/' target='_self'>Voir plus</a>
                             </div>");
 
                         if ($i%2==0) {

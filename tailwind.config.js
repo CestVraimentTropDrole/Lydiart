@@ -11,14 +11,14 @@ module.exports = {
       'blanc': "#f5f5f5",
       'blanc_full': "#ffffff",
     },
-    fontFamily: {
-      'playfair': ['Playfair Display', 'serif'],
-      'poppins': ['Poppins', 'sans-serif']
-    },
     extend: {
       boxShadow: {
         'head': '4px 8px 16px 0 rgba(0, 0, 0, 0.12)',
         'frame': '0px 8px 16px 0 rgba(0, 0, 0, 0.12)',
+      },
+      fontFamily: {
+        'playfair': ['Playfair Display', 'serif'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
       aspectRatio: {
         '4/3': '3 / 4',
@@ -27,4 +27,3 @@ module.exports = {
   },
   plugins: [],
 }
-
