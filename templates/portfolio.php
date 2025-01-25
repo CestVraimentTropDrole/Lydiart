@@ -2,33 +2,58 @@
     /*
         Template Name: Portfolio
     */
+
+    //Récupère l'id de la collection dans le tableau de collections si elle est définie dans l'URL
+    if (isset($_GET['idmain_collec'])) {
+        $idmain_collec = $_GET['idmain_collec'];
+    } else {
+        $idmain_collec = 0; //Sinon afficher la première collection par défaut
+    }
     
+
     /*Section En-tête*/
     $header = fetchData(get_field(selector: 'header'));
 
-    /*Section Collections*/
 
-    //Récupère toutes les données des collections
-    $data_collec = get_terms(['taxonomy' => 'collection','hide_empty' => false,]);
+    /*Section Collections*/
+    $data_collec = get_terms(['taxonomy' => 'collection','hide_empty' => false,]); //Récupère toutes les données des collections
     
     //Tableau qui récupère les infos importantes de chaque collection
     $collections = array();
 
     //Boucle qui parcourt chaque collection pour récupérer ses données
     for ($i=0; $i<count($data_collec); $i++) {
-        $collections[$i]['name'] = $data_collec[$i]->name;
-        $collections[$i]['id'] = $data_collec[$i]->term_id;
+        $collections[$i]['name'] = $data_collec[$i]->name; //Nom de la collection
+        $collections[$i]['id'] = $data_collec[$i]->term_id; //Id de la collection dans Wordpress
+        $collections[$i]['order'] = $i; //Ordre de la collection dans Wordpress
         $placeholder = "<img src='". get_template_directory_uri() ."/assets/images/Le bioù.jpg' alt='Placeholder'/>";
-
+    
         //Récupère toutes les oeuvres d'une collections
         $collections[$i]['image'] = fetchPost($collections[$i]['id']);
-
+    
         //Si la collection ne possède pas d'oeuvre avec une image, affiche un placeholder à la place
         $collections[$i]['image'] = $collections[$i]['image'] ? get_the_post_thumbnail($collections[$i]['image'][0]->ID) : $placeholder;
     }
 
-    $idmain_collec = 0; //Variable de l'id de la collection affichée dans le carousel
-    $oeuvres_array = fetchPost($collections[$idmain_collec]['id']); //Récupère toutes les oeuvres de la collection affichée
+    // Crée un nouveau tableau avec la collection de l'index idmain_collec en premier
+    $ordered_collections = array();
+    if ($idmain_collec >= 0 && $idmain_collec < count($collections)) {
+        // Ajoute la collection de l'index idmain_collec en premier
+        $ordered_collections[] = $collections[$idmain_collec];
+
+        // Ajoute toutes les autres collections, sauf celle qui est déjà ajoutée
+        foreach ($collections as $key => $collection) {
+            if ($key != $idmain_collec) {
+                $ordered_collections[] = $collection;
+            }
+        }
+    } else {
+        // Si l'index idmain_collec est invalide, on garde l'ordre d'origine
+        $ordered_collections = $collections;
+    }
+
+    $oeuvres_array = fetchPost($ordered_collections[0]['id']); // Récupère toutes les œuvres de la première collection
+
 
     /*Section Avis*/
     $testimonials = get_field('testimonials');
@@ -41,9 +66,6 @@
 
 <?php get_header(); ?>
 
-        <pre><?php
-        ?></pre>
-    
         <!--Section En-tête-->
         <section id="header" class="w-full h-fit flex flex-col px-5 py-10 gap-16 items-center text-center">
             <h4><?php echo($header['title']); ?></h4>
@@ -63,7 +85,7 @@
                             $content = get_fields($oeuvres_array[$i]->ID); //Récupérer les champs ACF
 
                             echo("<div class='carousel-cell flex justify-center'>
-                                    <div class='w-3/4 aspect-4/3 object-cover shadow-frame'>". $image ."</div>
+                                    <div class='image-container w-3/4 aspect-4/3 object-cover shadow-frame'>". $image ."</div>
                                     <div class='cartel w-fit px-3 py-4 shadow-frame bg-blanc_full flex flex-row gap-2 items-end'>
                                         <div class='flex flex-col items-start gap-2'>
                                             <p class='font-playfair font-medium text-lg'>". $title ."</p>
@@ -82,26 +104,26 @@
                 </div>
 
                 <!--Affiche le nom de la collection-->
-                <h2>"<?php echo($collections[0]['name']); ?>"</p>
+                <h2>"<?php echo($ordered_collections[0]['name']); ?>"</p>
             </div>
         </section>
 
         <!--Section Collection-->
         <section id="collection" class="flex flex-col items-center px-5 py-6 gap-12">
-            <div class="collection-row w-full flex px-20 justify-center items-center">
+            <div class="collection-row w-full flex px-20 justify-around items-center">
 
                 <?php
                     $path = get_template_directory_uri();
-                    for ($i=1; $i<count($collections); $i++) {
+                    for ($i=1; $i<count($ordered_collections); $i++) {
 
-                        echo("<div class='collection-frame flex flex-col items-center gap-4'>
-                                <div class='w-3/4 aspect-4/3 object-cover shadow-frame'>". $collections[$i]['image'] ."</div>
-                                <h2>". $collections[$i]['name'] ."</h2>
-                                <a class='button text-base' data-id=". $collections[$i]['id'] ." href='http://localhost/lydia_fize/index.php/portfolio/' target='_self'>Voir plus</a>
+                        echo("<div class='collection-frame w-1/2 flex flex-col items-center gap-4'>
+                                <div class='image-container w-3/4 aspect-4/3 object-cover shadow-frame'>". $ordered_collections[$i]['image'] ."</div>
+                                <h2>". $ordered_collections[$i]['name'] ."</h2>
+                                <a class='button collection-button text-base' href='?idmain_collec=". $ordered_collections[$i]['order'] ."'>Voir plus</a>
                             </div>");
 
                         if ($i%2==0) {
-                            echo("</div><div class='collection-row w-full flex px-20 justify-center items-center'>");
+                            echo("</div><div class='collection-row w-full flex px-20 justify-around items-center'>");
                         }
                     }
                 ?>
@@ -113,7 +135,7 @@
         <section id="testimonials" class="flex flex-col items-center gap-6">
             <h3>Quelques avis :</h3>
 
-            <div class="main-carousel avis-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": false, "pageDots": false, "wrapAround": true }'>
+            <div class="main-carousel avis-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": false, "pageDots": false, "wrapAround": true, "autoPlay": true }'>
                 
                 <!--Boucle qui affiche chaque commentaire-->
                 <?php

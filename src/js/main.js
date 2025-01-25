@@ -42,15 +42,3 @@ function clearAllSelections(carouselCells) {
         clearSelection(otherCell, otherImg, otherCartel);
     });
 }
-
-document.addEventListener('input', function (event) {
-    if (event.target.tagName.toLowerCase() === 'textarea') {
-        const textarea = event.target;
-
-        // Réinitialise la hauteur pour recalculer correctement
-        textarea.style.height = 'auto';
-
-        // Ajuste la hauteur en fonction du défilement
-        textarea.style.height = `${textarea.scrollHeight}px`;
-    }
-});

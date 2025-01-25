@@ -70,4 +70,5 @@ function fetchPost($cat_id) {
     );
     return $posts_array;
 }
+
 ?>
