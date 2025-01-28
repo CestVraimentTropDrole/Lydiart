@@ -20,7 +20,7 @@
   <body class="h-full top-0 flex flex-row bg-blanc">
     <header class="h-dvh top-0 bottom-0 fixed shadow-head w-[25vw] z-20 bg-blanc">
       <div class="menu-container h-full py-8 px-7 flex flex-col items-center justify-between z-0 relative">
-        <a href="<?php echo home_url(); ?>/accueil/">
+        <a href="<?php echo home_url(); ?>/">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo" class="w-28 h-32">
         </a>
 
