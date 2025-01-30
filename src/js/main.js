@@ -42,3 +42,17 @@ function clearAllSelections(carouselCells) {
         clearSelection(otherCell, otherImg, otherCartel);
     });
 }
+
+//Détecte le clic sur le menu burger
+const burgerButton = document.getElementById("burger-menu");
+const mobileMenu = document.getElementById("mobile-menu");
+
+burgerButton.addEventListener("click", () => {
+    if (mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.remove("hidden");
+        mobileMenu.classList.add("flex");
+    } else {
+        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("flex");
+    }
+});

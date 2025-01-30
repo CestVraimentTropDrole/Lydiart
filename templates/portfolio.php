@@ -76,6 +76,11 @@
             </div>
 
             <div class="w-full h-auto flex flex-col gap-8 items-center">
+                <div class="hidden lg:absolute overflow-hidden z-0">
+                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                    <dotlottie-player src="https://lottie.host/b7b86ede-9522-4d0b-9cad-cbf28ac52868/MjbpGXnZiw.lottie" background="transparent" speed="1" direction="1" playMode="normal" autoplay class="w-full h-full object-cover"></dotlottie-player>
+                </div>
+
                 <div id="slider" class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": false, "pageDots": false, "lazyLoad": true }'>
                     
                     <?php
@@ -85,7 +90,7 @@
                             $content = get_fields($oeuvres_array[$i]->ID); //Récupérer les champs ACF
 
                             echo("<div class='carousel-cell flex justify-center'>
-                                    <div class='image-container w-3/4 aspect-4/3 object-cover shadow-frame'>". $image ."</div>
+                                    <div class='image-container w-3/4 aspect-3/4 object-cover shadow-frame'>". $image ."</div>
                                     <div class='cartel w-fit px-3 py-4 shadow-frame bg-blanc_full flex flex-row gap-2 items-end'>
                                         <div class='flex flex-col items-start gap-2'>
                                             <p class='font-playfair font-medium text-lg'>". $title ."</p>
@@ -110,20 +115,20 @@
 
         <!--Section Collection-->
         <section id="collection" class="flex flex-col items-center px-5 py-6 gap-12">
-            <div class="collection-row w-full flex px-20 justify-around items-center">
+            <div class="collection-row w-full flex flex-col lg:flex-row lg:px-20 lg:justify-around items-center gap-6 lg:gap-0">
 
                 <?php
                     $path = get_template_directory_uri();
                     for ($i=1; $i<count($ordered_collections); $i++) {
 
-                        echo("<div class='collection-frame w-1/2 flex flex-col items-center gap-4'>
-                                <div class='image-container w-3/4 aspect-4/3 object-cover shadow-frame'>". $ordered_collections[$i]['image'] ."</div>
+                        echo("<div class='collection-frame w-full lg:w-1/2 flex flex-col items-center gap-4'>
+                                <div class='image-container w-full lg:w-3/4 aspect-3/4 object-cover shadow-frame'>". $ordered_collections[$i]['image'] ."</div>
                                 <h2>". $ordered_collections[$i]['name'] ."</h2>
                                 <a class='button collection-button text-base' href='?idmain_collec=". $ordered_collections[$i]['order'] ."'>Voir plus</a>
                             </div>");
 
                         if ($i%2==0) {
-                            echo("</div><div class='collection-row w-full flex px-20 justify-around items-center'>");
+                            echo("</div><div class='collection-row w-full flex flex-col lg:flex-row lg:px-20 lg:justify-around items-center gap-6 lg:gap-0'>");
                         }
                     }
                 ?>
@@ -132,7 +137,7 @@
         </section>
 
         <!--Section Avis-->
-        <section id="testimonials" class="flex flex-col items-center gap-6">
+        <section id="testimonials" class="flex flex-col items-center gap-6 p-6 lg:p-0">
             <h3>Quelques avis :</h3>
 
             <div class="main-carousel avis-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": false, "pageDots": false, "wrapAround": true, "autoPlay": true }'>

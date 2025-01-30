@@ -1,12 +1,17 @@
 .wpcf7-form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 18px;
     width: 100%;
+}
+
+.wpcf7-form p br {
+    display: none;
 }
 
 .wpcf7-form p {
     display: flex;
+    flex-direction: column;
     gap: 18px;
     justify-content: space-between;
     width: 100%;
@@ -91,24 +96,24 @@
 
 .wpcf7-form input::placeholder,
 .wpcf7-form textarea::placeholder {
-    color: white; /* Assurez-vous que la couleur est correcte */
-    line-height: 1.5; /* Ajustez la hauteur de ligne */
-    font-size: 16px; /* Taille suffisante pour ne pas couper le texte */
-    padding: 0; /* Évitez un padding négatif ou excessif */
-    margin: 0; /* Supprimez tout décalage éventuel */
-    overflow: visible; /* Empêchez le contenu d'être coupé */
+    color: white;
+    line-height: 1.5; 
+    font-size: 16px; 
+    padding: 0; 
+    margin: 0;
+    overflow: visible;
 }
 
 .wpcf7-form input,
 .wpcf7-form textarea {
-    line-height: 1.5; /* Hauteur de ligne suffisante */
-    padding: 8px 4px; /* Ajoutez un espace intérieur pour éviter que le texte ne touche les bords */
-    box-sizing: border-box; /* Assurez-vous que le padding est inclus dans la largeur/hauteur */
-    height: auto; /* Permet à l'élément de s'ajuster à son contenu */
-    min-height: 40px; /* Une hauteur minimale pour éviter que les champs soient trop petits */
-    color: white; /* Texte saisi par l'utilisateur */
-    background-color: transparent; /* Si le fond doit rester transparent */
-    border: none; /* Si vous souhaitez éviter des bordures gênantes */
+    line-height: 1.5;
+    padding: 8px 4px;
+    box-sizing: border-box; 
+    height: auto; 
+    min-height: 40px; 
+    color: white; 
+    background-color: transparent; 
+    border: none; 
 }
 
 .wpcf7-list-item-label {
@@ -119,4 +124,10 @@
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+@media (min-width: 1024px) { 
+    .wpcf7-form p {
+        flex-direction: row;
+    }
 }

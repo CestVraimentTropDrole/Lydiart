@@ -17,14 +17,18 @@
     }
 }
 
-.menu-menu-principal-container {
-    width: 100%;
+@media (min-width: 1024px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
 }
 
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 }
 
 .menu-item-object-category > a {
@@ -32,8 +36,17 @@
 }
 
 .menu-item-object-page > a {
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
     font-family: "Poppins", serif;
+}
+
+@media (min-width: 1024px) {
+    .menu-item-object-page > a {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        font-family: "Poppins", serif;
+    }
 }
 
 .button {

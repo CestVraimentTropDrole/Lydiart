@@ -1,4 +1,4 @@
-        <footer class="w-full flex flex-col items-center px-10 py-9 gap-12 bg-gris">
+        <footer class="w-full flex flex-col items-center px-10 py-9 gap-12 bg-gris z-10">
             <div class="w-full flex flex-col items-center gap-4">
                 <a class="flex items-center gap-2" href="https://www.instagram.com/lydiafize_art/" target="_blank">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_insta_blanc.svg" alt="Instagram" class="w-10">
@@ -6,8 +6,8 @@
                 </a>
                 <?php echo do_shortcode('[insta-gallery id="0"]'); ?>
             </div>
-            <div class="flex gap-4">
-                <div class="flex gap-28 px-8 py-6">
+            <div class="flex gap-4 flex-col lg:flex-row">
+                <div class="flex gap-28 px-8 py-6 flex-col lg:flex-row">
                     <div class="flex flex-col gap-2 items-center">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_blanc.png" alt="Logo" class="w-28 h-32">
                         <h2 class="text-blanc_full text-3xl">Lydia Fize</h2>

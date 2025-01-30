@@ -22,10 +22,10 @@
 <?php get_header(); ?>
 
         <!--Section Présentation-->
-        <section id="presentation" class="w-full h-dvh flex flex-row justify-between">
-            <img class="w-1/2 h-full object-cover" src="<?php echo($presentation['src']); ?>" alt="<?php echo($presentation['alt']); ?>">
-            <div class="w-1/2 flex flex-col justify-center px-24 gap-6">
-                <div class="flex flex-col gap-3">
+        <section id="presentation" class="w-full h-dvh flex flex-col gap-3 lg:gap-0 lg:flex-row justify-between overflow-x-hidden">
+            <img class="w-full lg:w-1/2 h-full object-cover z-10" src="<?php echo($presentation['src']); ?>" alt="<?php echo($presentation['alt']); ?>">
+            <div class="w-full lg:w-1/2 flex flex-col justify-center items-center px-3 py-4 lg:px-24 lg:py-0 gap-6">
+                <div class="flex flex-col gap-3 text-center">
                     <h2><?php echo($presentation['title']); ?></h2>
                     <p class="font-poppins font-light"><?php echo($presentation['description']); ?></p>
                 </div>
@@ -42,14 +42,14 @@
                     $direction = NULL;
 
                     if ($i%2 !== 0) { //Toutes les 2 sections, sa direction est inversée
-                        $direction = 'flex-row-reverse';
+                        $direction = 'lg:flex-row-reverse';
                     }
 
-                    echo("<div class='flex ". $direction ." gap-5 items-center'>
-                            <img src=". $demarche[$i]['src'] ." alt=". $demarche[$i]['title'] ." class='w-1/2 shadow-frame'>
+                    echo("<div class='flex flex-col ". $direction ." gap-8 lg:gap-5 items-center lg:flex-row'>
+                            <img src=". $demarche[$i]['src'] ." alt=". $demarche[$i]['title'] ." class='w-full lg:w-1/2 shadow-frame'>
                             <div class='flex flex-col gap-4'>
-                                <h3>". $demarche[$i]['title']  ."</h3>
-                                <p class='font-poppins font-light text-sm'>". $demarche[$i]['description']  ."</p>
+                                <h3 class='text-center lg:text-left'>". $demarche[$i]['title']  ."</h3>
+                                <p class='text-center lg:text-left font-poppins font-light text-sm'>". $demarche[$i]['description']  ."</p>
                             </div>
                         </div>");
                 }

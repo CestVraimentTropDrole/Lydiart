@@ -21,7 +21,7 @@ module.exports = {
         'poppins': ['Poppins', 'sans-serif'],
       },
       aspectRatio: {
-        '4/3': '3 / 4',
+        '3/4': '3 / 4',
       },
     },
   },
