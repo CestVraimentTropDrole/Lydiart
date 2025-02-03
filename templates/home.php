@@ -27,7 +27,7 @@
 
         <!--Section Présentation-->
         <section id="presentation" class="w-full h-dvh flex flex-col gap-3 lg:gap-0 lg:flex-row justify-between overflow-x-hidden">
-                <div class="hidden lg:absolute overflow-hidden z-0">
+                <div class="hidden lg:absolute lg:block overflow-hidden z-0">
                     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
                     <dotlottie-player src="https://lottie.host/b7b86ede-9522-4d0b-9cad-cbf28ac52868/MjbpGXnZiw.lottie" background="transparent" speed="1" direction="1" playMode="normal" autoplay class="w-full h-full object-cover"></dotlottie-player>
                 </div>
@@ -44,7 +44,7 @@
 
         <!--Section Sélection-->
         <section id="selection" class="w-full h-fit flex flex-col gap-12 p-10 items-center">
-            <div class="hidden lg:absolute overflow-hidden z-0">
+            <div class="hidden lg:absolute lg:block overflow-hidden z-0">
                 <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
                 <dotlottie-player src="https://lottie.host/b7b86ede-9522-4d0b-9cad-cbf28ac52868/MjbpGXnZiw.lottie" background="transparent" speed="1" direction="1" playMode="normal" autoplay class="w-full h-full object-cover" style="transform: scaleX(-1);"></dotlottie-player>
             </div>
