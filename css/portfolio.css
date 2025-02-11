@@ -83,13 +83,16 @@
 }
 
 .image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: relative; /* ou supprimer position:absolute si pas nécessaire */
+    width: auto;
+    height: 100%;
+    object-fit: contain; /* Affiche l’image entière sans rognage */
+}
+
+.collection-image img {
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    z-index: 20;
 }
 
 

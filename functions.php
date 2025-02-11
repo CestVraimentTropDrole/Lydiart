@@ -15,7 +15,6 @@ add_action( 'wp_enqueue_scripts', 'add_style' );
 function add_script() {
     wp_enqueue_script('flickity', get_template_directory_uri() . '/src/js/flickity.pkgd.min.js', array(), false, true);
     wp_enqueue_script('main-js', get_template_directory_uri() . '/src/js/main.js', array(), false, true);
-    wp_enqueue_script('lottie-player', get_template_directory_uri() . '/src/js/lottie.js', array(), false, true);
 }
 add_action( 'wp_enqueue_scripts', 'add_script' );
 

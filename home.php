@@ -9,8 +9,7 @@
         <!--Section Actus-->
         <section class="w-full flex flex-col gap-14 py-20">
             <div class="hidden lg:absolute lg:block overflow-hidden z-0 w-full left-[25-dvh] h-[75%]">
-                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-                <dotlottie-player src="https://lottie.host/b7b86ede-9522-4d0b-9cad-cbf28ac52868/MjbpGXnZiw.lottie" background="transparent" speed="1" direction="1" playMode="normal" autoplay class="w-full h-full object-cover"></dotlottie-player>
+                <div class="lottie-animation" data-lottie="<?php echo get_template_directory_uri(); ?>/assets/images/trait.json"></div>
             </div>
 
             <?php 

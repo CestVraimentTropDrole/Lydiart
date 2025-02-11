@@ -37,5 +37,36 @@
     </div>
 
     <?php wp_footer(); ?>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var animations = document.querySelectorAll(".lottie-animation"); // Sélectionne tous les conteneurs d'animation
+
+            animations.forEach(function (animationContainer) {
+                var animationPath = animationContainer.getAttribute("data-lottie"); // Récupère le chemin JSON
+
+                var animation = lottie.loadAnimation({
+                    container: animationContainer,
+                    renderer: "svg",
+                    loop: false, // Empêche la répétition
+                    autoplay: false, // Désactive l'autoplay au chargement
+                    path: animationPath // Charge l'animation spécifique
+                });
+
+                // Observer pour détecter quand l'animation est visible à l'écran
+                var observer = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            console.log("Animation visible : ", animationPath);
+                            animation.play(); // Joue l'animation
+                            observer.unobserve(animationContainer); // Arrête d'observer après la lecture
+                        }
+                    });
+                }, { threshold: 0.5 }); // Se déclenche quand 50% du conteneur est visible
+
+                observer.observe(animationContainer);
+            });
+        });
+    </script>
 </body>
 </html>

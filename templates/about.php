@@ -25,7 +25,7 @@
         <section id="presentation" class="w-full h-dvh flex flex-col gap-3 lg:gap-0 lg:flex-row justify-between overflow-x-hidden">
             <img class="w-full lg:w-1/2 h-full object-cover z-10" src="<?php echo($presentation['src']); ?>" alt="<?php echo($presentation['alt']); ?>">
             <div class="w-full lg:w-1/2 flex flex-col justify-center items-center px-3 py-4 lg:px-24 lg:py-0 gap-6">
-                <div class="flex flex-col gap-3 text-center">
+                <div class="flex flex-col gap-4 text-center">
                     <h2><?php echo($presentation['title']); ?></h2>
                     <p class="font-poppins font-light"><?php echo($presentation['description']); ?></p>
                 </div>
