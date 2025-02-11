@@ -28,7 +28,7 @@
         <!--Section Présentation-->
         <section id="presentation" class="w-full h-dvh flex flex-col gap-3 lg:gap-0 lg:flex-row justify-between overflow-x-hidden">
                 <div class="hidden lg:absolute lg:block overflow-hidden z-0 right-0 h-[100vh] w-[100dvw]">
-                    <div class="lottie-animation absolute right-[-180px]" data-lottie="<?php echo get_template_directory_uri(); ?>/assets/images/trait.json"></div>
+                    <div class="lottie-animation absolute h-[100%] left-[35%]" data-lottie="<?php echo get_template_directory_uri(); ?>/assets/images/trait.json"></div>
                 </div>
         
             <img class="w-full lg:w-1/2 h-full object-cover z-10" src="<?php echo($presentation['src']); ?>" alt="<?php echo($presentation['alt']); ?>">
@@ -43,8 +43,8 @@
 
         <!--Section Sélection-->
         <section id="selection" class="w-full h-fit flex flex-col gap-12 p-10 items-center">
-            <div class="hidden lg:absolute lg:block overflow-hidden z-0 right-[-5%] h-[65%] w-[95dvw]">
-                <div class="lottie-animation absolute scale-x-[-1] h-[108%] left-[160px]" data-lottie="<?php echo get_template_directory_uri(); ?>/assets/images/trait.json"></div>
+            <div class="hidden lg:absolute lg:block overflow-hidden z-0 right-[-5%] h-[82%] w-[95dvw]">
+                <div class="lottie-animation absolute scale-x-[-1] h-[100%] left-[14%]" data-lottie="<?php echo get_template_directory_uri(); ?>/assets/images/trait.json"></div>
             </div>
 
             <h3 class="z-10"><?php echo($selection['title']); ?></h3>

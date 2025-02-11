@@ -9,7 +9,7 @@
         <!--Section Actus-->
         <section class="w-full flex flex-col gap-14 py-20">
             <div class="hidden lg:absolute lg:block overflow-hidden z-0 w-full left-[25-dvh] h-[75%]">
-                <div class="lottie-animation" data-lottie="<?php echo get_template_directory_uri(); ?>/assets/images/trait.json"></div>
+                <div class="lottie-animation object-cover" data-lottie="<?php echo get_template_directory_uri(); ?>/assets/images/trait.json"></div>
             </div>
 
             <?php 
